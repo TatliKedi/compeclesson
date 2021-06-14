@@ -10,7 +10,7 @@ namespace Lessons
         [SerializeField] private ControlRigidbodySettings _settings;
         private void Update()
         {
-            bool spaceKeyDown = Input.GetKeyDown(KeyCode.Space);
+            bool spaceKeyDown = Input.GetKeyUp(KeyCode.Space);
             if (spaceKeyDown)
             {
                 _rigidbody.AddForce(_settings.JumpForce, ForceMode.Impulse);
